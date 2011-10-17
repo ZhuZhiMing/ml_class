@@ -27,7 +27,10 @@ sigma = zeros(1, size(X, 2));
 %       
 
 
-
+mu = mean(X);
+sigma = std(X);
+ones_column = ones(size(X, 1), 1);
+X_norm = (X - ones_column * mu) ./ (ones_column * sigma); 
 
 
 
